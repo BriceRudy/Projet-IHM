@@ -1,3 +1,112 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+
+    a {
+        @apply bg-transparent block w-full text-black text-center hover:text-bluee;
+    }
+
+    html{
+        @apply font-sans font-semibold text-13px text-black;
+    }
+
+    li{
+        @apply text-bluee;
+    }
+
+    img{
+        @apply border-none;
+    }
+    body{
+        @apply m-0 w-full min-h-screen flex flex-col justify-start;
+    }
+
+}
+
+@layer components{
+    .tainer{
+        @apply w-full max-w-1200px pt-0 pr-30px mt-0 m-auto;
+    }
+    .ul_header {
+        @apply flex flex-row m-0 p-0;
+    }
+    .a_header {
+        @apply inline-block pt-30px py-20px pb-15px mr-2.5 border-t-[3px] border-solid ease-in-out duration-300 transition-all hover:border-bluee hover:text-inherit;
+    }
+    .nav_header_respon {
+        @apply md:w-full md:mb-0;
+    }
+    .li_header_respon {
+        @apply md:grow-6 md:w-full;
+    }
+    .a_header_respon {
+        @apply md:pt-0 md:border-t-inherit md:border-b-[3px] md:border-solid md:border-bluee;
+    }
+    .resultat {
+        @apply w-[66%] flex flex-col justify-between;
+    }
+    .activities {
+        @apply pt-[30px] mb-[60px];
+    }
+}
+
+@layer utilities{
+    hr {
+        @apply box-content h-0 overflow-visible ;
+      }
+    pre {
+        @apply font-monospace text-tp;}
+
+    abbr[title]{
+            @apply border-b-0 underline ;
+        }
+     b,strong{
+            @apply font-bold;
+        }
+     code,kbd,samp {
+            @apply font-monospace text-tp;
+        }
+        small{
+            @apply text-[80%] ;
+        }
+        sup,sub{
+            @apply text-[75%] leading-0 relative align-baseline;
+        }
+        button,input,optgroup,select,textarea {
+            @apply font-inherit text-[100%] leading-1.15 m-0;
+        }
+        button,input{
+            @apply visible;
+        }
+        button,select{
+            @apply normal-case;}
+            legend{
+                @apply box-border text-inherit table max-w-full p-0 whitespace-normal;
+            }
+            progress{
+                @apply align-baseline;
+            }
+            textarea{
+                @apply overflow-auto;}
+                [type="checkbox"],[type="radio"]{
+                    @apply box-border p-0;
+                }
+                [type="number"]::-webkit-inner-spin-button,
+                [type="number"]::-webkit-outer-spin-button {
+                    @apply h-auto
+                }
+                details{
+                    @apply block ;
+                }
+                summary{
+                    @apply list-item;
+                }
+                template{
+                    @apply hidden;
+                }
+                [hidden] {
+                    @apply hidden;
+                  }
+}

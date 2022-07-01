@@ -1,14 +1,442 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="/dist/output.css" rel="stylesheet">
-</head>
-<body>
+<html class="font-relay font-semibold text-13px decoration-black leading-1.15" lang="en">
+  
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Stéphane Lieumont">
+        <meta name="description" content="Trouvez des hébergements et des activités dans la ville de votre choix">
+        <meta name="copyright" content="© Booki.com" />
+        <meta name="robots" content="none" />
+        <link href="/dist/output.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon//favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon//favicon-16x16.png">
+        <link rel="manifest" href="../images/favicon/site.webmanifest">
+        <title>Booki 2</title>
+      </head>
 
-    <h1>Hello world</h1>
+<body class="">
+    <header class="tainer">
+        <div class="flex justify-between mr-5 ml-5">
+          <div id="main-logo" class="pt-20px pr-0">
+            <img class="w-[80px] ml-[20px]" srcset="../images/logo/Booki.png, ../images/logo/Booki@3x.png 3x" src="../images/logo/Booki@3x.png" alt="logo booki">
+          </div>
+          <nav class="">
+            <ul class="ul_header">
+              <li class=""><a class="a_header border-t-bluee text-bluee" href="#resultat">Hébergements</a></li>
+              <li class=""><a class="a_header border-t-transparent" href="#activities">Activités</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    <main class="w-full grow block">
+      <section id="search" class="tainer">
+        <div id="search-title">
+          <h1 class="mt-[20px] mb-[5px] text-2xl">Trouver votre hébergement pour des vacances de rêve</h1>
+          <p class="mt-0 text-lg mb-30px">En plein centre ville ou en pleine nature</p>
+        </div>
+        <form action="#" method="get" class="block overflow-auto mb-15px">
+          <div id="search-bar" class="flex justify-start items-center flex-nowrap w-full h-10 max-w-300px m-0 mb-15px rounded-xl shadow-gray-50 box-border overflow-hidden">
+            <i id="search-bar-icon-marker" class="text-15px flex justify-start items-center h-full min-w-35px bg-gray-100"></i>
+            <input type="text" value="Marseille, France" class="text-15px h-full outline-none font-extrabold w-full pr-2.5 pb-3 pt-3 pl-0.5 bg-white border-gray-50 border-2">
+            <div class="hover:bg-[#DEEBFF] hover:text-bluee border-none bg-bluee text-whitee h-full cursor-pointer relative transition-all duration-200 ease-in-out">
+              <input type="submit" value="Rechercher" class="text-base h-full font-semibold bg-none border-none pl-5 pr-5 cursor-pointer text-inherit">      
+              <i class="absolute top-1/2 right-1/2 translate-x-1/2 translate-[-50%] hidden"></i>
+            </div>
+          </div>
+        </form>
+          <div id="search-filter" class="flex justify-start items-center flex-nowrap p-0 m-0">
+            <h3 class="p-0 m-0 mr-5 text-xl font-bold">Filtres</h3>
+            <ul class="flex justify-start items-center flex-nowrap p-0 m-0">
+              <li class="relative flex items-center shadow-tip rounded-[20px] mt-2.5 mr-[15px] ml-0 overflow-hidden">
+                <input id="eco" type="checkbox" onclick="window.location.href = '#';" class="absolute top-0 left-[-9999px] box-border p-0">
+                <label class="relative pt-0 pr-[20px] pl-[50px] leading-[40px] font-extrabold cursor-pointer prepend-icon-money before:content-['\f53a']" for="eco">Economique</label>
+              </li>
+              <li class="relative flex items-center shadow-tip rounded-[20px] mt-2.5 mr-[15px] overflow-hidden">
+                <input id="fam" type="checkbox" onclick="window.location.href = '#';" class="absolute top-0 left-[-9999px] box-border p-0">
+                <label class="relative pt-0 pr-[20px] pl-[50px] leading-[40px] font-extrabold cursor-pointer before:content-['\f1ae']" for="fam">Familial</label>
+              </li>
+              <li class="relative flex items-center shadow-tip rounded-[20px] mt-2.5 mr-[15px] ml-0 overflow-hidden">
+                <input id="rom" type="checkbox" onclick="window.location.href = '#';" class="absolute top-0 left-[-9999px] box-border p-0">
+                <label class="relative pt-0 pr-[20px] pl-[50px] leading-[40px] font-extrabold cursor-pointer before:content-['\f004']" for="rom">Romantique</label>
+              </li>
+              <li class="relative flex items-center shadow-tip rounded-[20px] mt-2.5 mr-[15px] ml-0 overflow-hidden">
+                <input id="anim" type="checkbox" onclick="window.location.href = '#';" class="absolute top-0 left-[-9999px] box-border p-0">
+                <label class="relative pt-0 pr-[20px] pl-[50px] leading-[40px] font-extrabold cursor-pointer before:content-['\f6d3']" for="anim">Animaux autorisés</label>
+              </li>
+            </ul>
+          </div>
+          <p class="flex flex-row justify-start items-start leading-5"><i class="infos-icon flex-0 before:content-['\f129'] font-black text-10px text-center mr-2.5 inline-block h-18px w-18px leading-18px align-middle border-2 border-solid border-gray-50 italic"></i><span>Plus de 500 logements sont disponnibles dans cette ville</span></p>
+      </section>
+      <section id="search-resultat" class="max-w-992px flex-col-reverse m-auto p-30px">
     
+      <div class="ml-10 justify-start w-[900px] h-auto absolute inset-y-auto left-0">
+        <div id="resultat" class="mt-0 bg-gray-100 m-0 p-30px rounded-15px">
+          <h2 class="mb-5 mt-0 text-1 font-bold">Hébergements à Marseille</h2>
+          <ul id="resultat-list" class="m-0 p-0 gap-y-15px gap-x-15px">
+            <div class="grid grid-cols-3 grid-rows-2 gap-5">
+              <div class="cursor-pointer">
+                <li class="">
+                  <a href="#" class="border-4 rounded-2xl border-solid border-white">
+                    <div class="">
+                      <img class="h-300px w-300px rounded-t-xl min-w-full max-w-100px max-h-full block object-cover" srcset="../images/hebergements/4_small/Auberge_Can.jpg,
+                                 ../images/hebergements/3_medium/Auberge_Can.jpg 2x,
+                                 ../images/hebergements/2_large/Auberge_Can.jpg 4x,
+                                 ../images/hebergements/1_xlarge/Auberge_Can.jpg 8x" src="../images/hebergements/3_medium/Auberge_Can.jpg" alt="Auberge la Canebière">
+                    </div>
+                    <div class="flex flex-col pt-7px pb-13px transition-all ease-in-out bg-white">
+                      <h4 class="font-extrabold text-15px">Auberge la Canebière</h4>
+                      <p>Nuit à partir de 25€</p>
+                      <ul class="flex flex-row flex-nowrap p-0 ml-3">
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-gray-200 list-none"><i class="fas fa-star"></i></li>
+                      </ul>
+                    </div>
+                  </a>
+                </li>
+              </div>
+              <div class="cursor-pointer">
+                <li>
+                  <a href="#" class="border-4 rounded-2xl border-solid border-white">
+                    <div class="">
+                      <img class="h-300px w-300px rounded-t-xl min-w-full max-w-100px max-h-full block object-cover" srcset="../images/hebergements/4_small/Hotel_Mouette.jpg,
+                                 ../images/hebergements/3_medium/Hotel_Mouette.jpg 2x,
+                                 ../images/hebergements/2_large/Hotel_Mouette.jpg 4x,
+                                 ../images/hebergements/1_xlarge/Hotel_Mouette.jpg 8x" src="../images/hebergements/3_medium/Hotel_Mouette.jpg" alt="Hôtel Les mouettes">
+                    </div>
+                    <div class="flex flex-col pt-7px pb-13px transition-all ease-in-out bg-white">
+                      <h4 class="font-extrabold text-15px">Hôtel Les mouettes</h4>
+                      <p>Nuit à partir de 76€</p>
+                      <ul class="flex flex-row flex-nowrap p-0 ml-3">
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-gray-200 list-none"><i class="fas fa-star"></i></li>
+                      </ul>
+                    </div>
+                  </a>
+                </li>
+              </div>
+              <div class="cursor-pointer">
+                <li>
+                  <a href="#" class="border-4 rounded-2xl border-solid border-white">
+                    <div>
+                      <img class="h-300px w-300px rounded-t-xl min-w-full max-w-100px max-h-full block object-cover" srcset="../images/hebergements/4_small/Hotel_Port.jpg,
+                                 ../images/hebergements/3_medium/Hotel_Port.jpg 2x,
+                                 ../images/hebergements/2_large/Hotel_Port.jpg 4x,
+                                 ../images/hebergements/1_xlarge/Hotel_Port.jpg 8x" src="../images/hebergements/3_medium/Hotel_Port.jpg" alt="Hôtel du port">
+                    </div>
+                    <div class="flex flex-col pt-7px pb-13px transition-all ease-in-out bg-white">
+                      <h4 class="font-extrabold text-15px">Hôtel du port</h4>
+                      <p>Nuit à partir de 52€</p>
+                      <ul class="flex flex-row flex-nowrap p-0 ml-3">
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                      </ul>
+                    </div>
+                  </a>
+                </li>
+              </div>
+              <div class="cursor-pointer">
+                <li>
+                  <a href="#" class="border-4 rounded-2xl border-solid border-white">
+                    <div>
+                      <img class="h-300px w-300px rounded-t-xl min-w-full max-w-100px max-h-full block object-cover" srcset="../images/hebergements/4_small/Hotel_Mer.jpg,
+                                 ../images/hebergements/3_medium/Hotel_Mer.jpg 2x,
+                                 ../images/hebergements/2_large/Hotel_Mer.jpg 4x,
+                                 ../images/hebergements/1_xlarge/Hotel_Mer.jpg 8x" src="../images/hebergements/3_medium/Hotel_Mer.jpg" alt="Hôtel de la mer">
+                    </div>
+                    <div class="flex flex-col pt-7px pb-13px transition-all ease-in-out bg-white">
+                      <h4 class="font-extrabold text-15px">Hôtel de la mer</h4>
+                      <p>Nuit à partir de 76€</p>
+                      <ul class="flex flex-row flex-nowrap p-0 ml-3">
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-gray-200 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-gray-200 list-none"><i class="fas fa-star"></i></li>
+                      </ul>
+                    </div>
+                  </a>
+                </li>
+              </div>
+              <div class="cursor-pointer">
+                <li>
+                  <a href="#" class="border-4 rounded-2xl border-solid border-white">
+                    <div>
+                      <img class="h-300px w-300px rounded-t-xl min-w-full max-w-100px max-h-full block object-cover" srcset="../images/hebergements/4_small/Auberge_Pannier.jpg,
+                                 ../images/hebergements/3_medium/Auberge_Pannier.jpg 2x,
+                                 ../images/hebergements/2_large/Auberge_Pannier.jpg 4x,
+                                 ../images/hebergements/1_xlarge/Auberge_Pannier.jpg 8x" src="../images/hebergements/3_medium/Auberge_Pannier.jpg" alt="Auberge Le Panier">
+                    </div>
+                    <div class="flex flex-col pt-7px pb-13px transition-all ease-in-out bg-white">
+                      <h4 class="font-extrabold text-15px">Auberge Le Panierr</h4>
+                      <p>Nuit à partir de 23€</p>
+                      <ul class="flex flex-row flex-nowrap p-0 ml-3">
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-gray-200 list-none"><i class="fas fa-star"></i></li>
+                      </ul>
+                    </div>
+                  </a>
+                </li>
+              </div>
+              <div class="cursor-pointer">
+                <li>
+                  <a href="#" class="border-4 rounded-2xl border-solid border-white">
+                    <div>
+                      <img class="h-300px w-300px rounded-t-xl min-w-full max-w-100px max-h-full block object-cover" srcset="../images/hebergements/4_small/Hotel_Amina.jpg,
+                                 ../images/hebergements/3_medium/Hotel_Amina.jpg 2x,
+                                 ../images/hebergements/2_large/Hotel_Amina.jpg 4x,
+                                 ../images/hebergements/1_xlarge/Hotel_Amina.jpg 8x" src="../images/hebergements/3_medium/Hotel_Amina.jpg" alt="Hôtel chez Amina">
+                    </div>
+                    <div class="flex flex-col pt-7px pb-13px transition-all ease-in-out bg-white">
+                      <h4 class="font-extrabold text-15px">Hôtel chez Amina</h4>
+                      <p>Nuit à partir de 96€</p>
+                      <ul class="flex flex-row flex-nowrap p-0 ml-3">
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                      </ul>
+                    </div>
+                  </a>
+                </li>
+              </div>
+
+            </div>
+          </ul>
+          <h4 class="cursor-pointer m-0 pt-[30px] pb-0 ease-in-out hover:text-bluee text-18px font-semibold">Afficher plus</h4>       
+        </div>
+      </div>
+
+
+
+      <div class="mr-20 justify-end w-auto max-h-[900px] absolute inset-x-auto right-0">
+        <div id="popular" class="mt-0 bg-gray-100 m-0 p-30px rounded-15px">
+
+          <h2 class="mb-20px mt-0 text-1 font-bold">Les plus populaires<span><i class="fas fa-chart-line"></i></span></h2>
+          <ul id="popular-list" class="m-0 p-0 flex grow flex-col justify-between flex-nowrap items-stretch gap-y-20px gap-x-20px">
+            <div class="grid grid-rows-3 gap-3">
+              <div>
+                <li>
+                  <a href="#" class="border-4 rounded-2xl border-solid border-white">
+                    <div class="object-cover h-full flex-40">
+                      <img class="object-cover h-[128px] rounded-t-xl w-[250px] max-w-full min-w-100px block" srcset="../images/hebergements/4_small/Hotel_S_Matin.jpg,
+                                 ../images/hebergements/3_medium/Hotel_S_Matin.jpg 2x,
+                                 ../images/hebergements/2_large/Hotel_S_Matin.jpg 4x,
+                                 ../images/hebergements/1_xlarge/Hotel_S_Matin.jpg 8x" src="../images/hebergements/3_medium/Hotel_S_Matin.jpg" alt="Hôtel Le soleil du matin">
+                    </div>
+                    <div class="flex flex-col pt-7px w-[250px] pb-13px transition-all ease-in-out bg-white">
+                      <h4 class="text-lg font-bold">Hôtel Le soleil du matin</h4>
+                      <p>Nuit à partir de 128€</p>
+                      <ul class="flex-row flex flex-nowrap p-0 ml-3">
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                      </ul>
+                    </div>
+                  </a>
+                </li>
+              </div>
+              <div class="mt-1">
+                <li>
+                  <a href="#" class="border-4 rounded-2xl border-solid border-white">
+                    <div class="object-cover h-full flex-40">
+                      <img class="object-cover h-[128px] rounded-t-xl w-[250px] max-w-full min-w-100px block" srcset="../images/hebergements/4_small/Coeur_Eau.jpg,
+                                 ../images/hebergements/3_medium/Coeur_Eau.jpg 2x,
+                                 ../images/hebergements/2_large/Coeur_Eau.jpg 4x,
+                                 ../images/hebergements/1_xlarge/Coeur_Eau.jpg 8x" src="../images/hebergements/3_medium/Coeur_Eau.jpg" alt="Au coeur de l'eau Chambres d'hôtes">
+                    </div>
+                    <div class="flex flex-col pt-7px w-[250px] pb-13px transition-all ease-in-out bg-white">
+                      <h4 class="text-lg font-bold">Au coeur de l'eau Chambres d'hôtes</h4>
+                      <p>Nuit à partir de 71€</p>
+                      <ul class="flex-row flex flex-nowrap p-0 ml-3">
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-gray-100 list-none"><i class="fas fa-star"></i></li>
+                      </ul>
+                    </div>
+                  </a>
+                </li>
+              </div>
+              <div class="mt-5">
+                <li>
+                  <a href="#" class="border-4 rounded-2xl border-solid border-white">
+                    <div class="object-cover h-full flex-40">
+                      <img class="object-cover h-[128px] rounded-t-xl w-[250px] max-w-full min-w-100px block" srcset="../images/hebergements/4_small/Hotel_Bleu_Blanc.jpg,
+                                 ../images/hebergements/3_medium/Hotel_Bleu_Blanc.jpg 2x,
+                                 ../images/hebergements/2_large/Hotel_Bleu_Blanc.jpg 4x,
+                                 ../images/hebergements/1_xlarge/Hotel_Bleu_Blanc.jpg 8x" src="../images/hebergements/3_medium/Hotel_Bleu_Blanc.jpg" alt="Hôtel Tout bleu et Blanc">
+                    </div>
+                    <div class="flex flex-col pt-7px w-[250px] pb-13px transition-all ease-in-out bg-white">
+                      <h4 class="text-lg font-bold">Hôtel Tout bleu et Blanc</h4>
+                      <p>Nuit à partir de 68€</p>
+                      <ul class="flex-row flex flex-nowrap p-0 ml-3">
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-blue-600 list-none"><i class="fas fa-star"></i></li>
+                        <li class="text-gray-100 list-none"><i class="fas fa-star"></i></li>
+                      </ul>        
+                    </div>
+                  </a>
+                </li>
+              </div>
+            </div>
+          </ul>
+          
+        </div>
+      </div>
+      </section>
+      <section id="activities" class="max-w-992px flex-col-reverse m-auto p-30px pt-30px mb-60px">
+        <div class="ml-10 mr-20 rounded-lg bg-zinc-50 absolute h-[550px] w-[1255px] inset-x-0 top-[170%]">
+          <h2 class="mb-5 mt-7 ml-5 text-1 font-bold">Activités à Marseille</h2>
+          <ul id="activities-list" class="p-0 ml-5 flex flex-row flex-wrap">
+            <div class="grid grid-cols-4 gap-8">
+              <div>
+                <li class="">
+                  <a href="#">
+                    <div>
+                      <img class="object-cover h-[400px] rounded-t-xl w-[400px] max-w-full min-w-100px block" srcset="../images/activites/4_small/Vieux_Port.jpg,
+                                 ../images/activites/3_medium/Vieux_Port.jpg 2x,
+                                 ../images/activites/2_large/Vieux_Port.jpg 4x,
+                                 ../images/activites/1_xlarge/Vieux_Port.jpg 8x" src="../images/activites/3_medium/Vieux_Port.jpg" alt="Vieux Port">
+                    </div>
+                    <div class="flex flex-col rounded-b-2xl bg-white pt-7px pb-13px transition-all ease-in-out">
+                      <h4 class="text-lg font-bold">Vieux Port</h4>
+                    </div>
+                  </a>
+                </li>
+              </div>
+              <div class="grid grid-rows-2 gap-6">
+                <div>
+                  <li class="">
+                    <a href="#">
+                      <div>
+                        <img class="object-cover rounded-t-xl h-[173px] w-[500px] max-w-full min-w-100px block" srcset="../images/activites/4_small/Fort_P.jpg,
+                                     ../images/activites/3_medium/Fort_P.jpg 2x,
+                                     ../images/activites/2_large/Fort_P.jpg 4x,
+                                     ../images/activites/1_xlarge/Fort_P.jpg 8x" src="../images/activites/3_medium/Fort_P.jpg" alt="Fort de Pomègues">
+                      </div>
+                      <div class="flex flex-col rounded-b-2xl bg-white pt-7px pb-13px transition-all ease-in-out">
+                        <h4 class="text-lg font-bold">Fort de Pomègues</h4>
+                      </div>
+                    </a>
+                  </li>
+                </div>
+                <div>
+                  <li class="">
+                    <a href="#">
+                      <div>
+                        <img class="object-cover rounded-t-xl h-[172px] w-[500px] max-w-full min-w-100px block" srcset="../images/activites/4_small/Ile_F.jpg,
+                                     ../images/activites/3_medium/Ile_F.jpg 2x,
+                                     ../images/activites/2_large/Ile_F.jpg 4x,
+                                     ../images/activites/1_xlarge/Ile_F.jpg 8x" src="../images/activites/3_medium/Ile_F.jpg" alt="Îles du Frioul">
+                      </div>
+                      <div class="flex flex-col rounded-b-2xl bg-white pt-7px pb-13px transition-all ease-in-out">
+                        <h4 class="text-lg font-bold">Îles du Frioul</h4>
+                      </div>
+                    </a>
+                  </li>
+                </div> 
+              </div>
+              <div>
+                <li class="">
+                  <a href="#">
+                    <div>
+                      <img class="object-cover h-[400px] rounded-t-xl w-[400px] max-w-full min-w-100px block" srcset="../images/activites/4_small/Parc_N_C.jpg,
+                                 ../images/activites/3_medium/Parc_N_C.jpg 2x,
+                                 ../images/activites/2_large/Parc_N_C.jpg 4x,
+                                 ../images/activites/1_xlarge/Parc_N_C.jpg 8x" src="../images/activites/3_medium/Parc_N_C.jpg" alt="Parc National des Calanques">
+                    </div>
+                    <div class="flex flex-col rounded-b-2xl bg-white pt-7px pb-13px transition-all ease-in-out">
+                      <h4 class="text-lg font-bold">Parc National des Calanques</h4>
+                    </div>
+                  </a>
+                </li>
+              </div>
+              <div class="grid grid-rows-2 gap-6">
+                <div>
+                  <li class="">
+                    <a href="#" class="">
+                      <div class="mr-[12px]">
+                        <img class="object-cover rounded-t-xl h-[173px] w-[500px] max-w-full min-w-100px block" srcset="../images/activites/4_small/Notre_D_G.jpg,
+                                   ../images/activites/3_medium/Notre_D_G.jpg 2x,
+                                   ../images/activites/2_large/Notre_D_G.jpg 4x,
+                                   ../images/activites/1_xlarge/Notre_D_G.jpg 8x" src="../images/activites/3_medium/Notre_D_G.jpg" alt="Notre-Dame-de-la-Garde">
+                      </div>
+                      <div class="flex flex-col mr-[12px] rounded-b-2xl bg-white pt-7px pb-13px transition-all ease-in-out">
+                        <h4 class="text-lg font-bold">Notre-Dame-de-la-Garde</h4>
+                      </div>
+                    </a>
+                  </li>
+                </div>
+                <div>
+                  <li class="">
+                    <a href="#">
+                      <div class="mr-[12px]">
+                        <img class="object-cover rounded-t-xl h-[172px] w-[500px] max-w-full min-w-100px block" srcset="../images/activites/4_small/Parc_L.jpg,
+                        ../images/activites/3_medium/Parc_L.jpg 2x,
+                        ../images/activites/2_large/Parc_L.jpg 4x,
+                        ../images/activites/1_xlarge/Parc_L.jpg 8x" src="../images/activites/3_medium/Parc_L.jpg" alt="Parc Longchamp">
+                      </div>
+                      <div class="flex flex-col mr-[12px] rounded-b-2xl bg-white pt-7px pb-13px transition-all ease-in-out">
+                        <h4 class="text-lg font-bold">Parc Longchamp</h4>
+                      </div>
+                    </a>
+                  </li>
+                </div>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-gray-200 flex absolute inset-x-0 top-[260%]">
+      <div class="activities flex-column flex-auto ml-[40px] mt-30px mb-30px overflow-x-auto">
+        <h3 class="font-extrabold text-xl">A propos</h3>
+        <ul class="p-0 m-0 mb-15px mt-[15px] text-lg">
+          <li class="mb-2.5"><a href="#" class="font-medium text-[90%] text-left">Fonctionnement du site</a></li>
+          <li class="mb-2.5"><a href="#" class="font-medium text-[90%] text-left">Conditions générales de vente</a></li>
+          <li class="mb-2.5"><a href="#" class="font-medium text-[90%] text-left">Données et confidentialité</a></li>
+        </ul>
+      </div>
+      <div class="activities flex-column text-center flex-auto mt-30px mb-30px overflow-x-auto">
+        <h3 class="font-extrabold text-xl">Nos hébergements</h3>
+        <ul class="p-0 m-0 mb-15px mt-[15px] text-lg">
+          <li class="mb-2.5"><a href="#" class="font-medium text-[90%] text-center">Charte qualité</a></li>
+          <li class="mb-2.5"><a href="#" class="font-medium text-[90%] text-center">Soumettre votre hôtel</a></li>
+        </ul>
+      </div>
+      <div class="activities flex-column text-right flex-auto mr-[40px] mt-30px mb-30px overflow-x-auto">
+        <h3 class="font-extrabold text-xl">Assistance</h3>
+        <ul class="p-0 m-0 mb-15px mt-[15px] text-lg">
+          <li class="mb-2.5"><a href="#" class="font-medium text-[90%] text-right">Centre d'aide</a></li>
+          <li class="mb-2.5"><a href="#" class="font-medium text-[90%] text-right">Nous contacte</a></li>
+        </ul>
+      </div>
+    </footer>     
 </body>
+
 </html>
